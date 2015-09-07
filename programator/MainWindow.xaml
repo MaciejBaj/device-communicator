@@ -1,0 +1,30 @@
+﻿<Window x:Class="programator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Programmator" Height="350" Width="525"
+        Closing="MainWindow_OnClosing">
+    <Grid>
+        <TabControl Name="TabControlMenu">
+            <TabItem Header="diagnostics">
+                <Grid>
+                    <Button x:Name="ConnectButton" Content="Connect" HorizontalAlignment="Left" Margin="245,59,0,0" VerticalAlignment="Top" Width="99" Click="ConnectButton_Click"/>
+                    <TextBox x:Name="ReceivedMessageBox" HorizontalAlignment="Left" Height="95" Margin="84,131,0,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="260"/>
+                    <TextBox x:Name="SendMessageTextBox" HorizontalAlignment="Left" Height="23" Margin="84,231,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156"/>
+                    <Button x:Name="SendMessageButton" Content="Send" HorizontalAlignment="Left" Margin="245,231,0,0" VerticalAlignment="Top" Width="99" Height="23" Click="SendMessageButton_Click"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="84,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="pl-pl" Text="Received:"/></TextBlock>
+                    <ComboBox x:Name="SerialPortsComboBox" HorizontalAlignment="Left" Margin="84,59,0,0" VerticalAlignment="Top" Width="156"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="programming">
+                <Grid>
+                    <TextBox Height="32" HorizontalAlignment="Left" Margin="6,10,0,0" Name="FileNameTextBox" VerticalAlignment="Top" Width="318" />
+                    <TextBox Height="98" HorizontalAlignment="Left" Margin="10,183,0,0" Name="MonitorTextBox" VerticalAlignment="Top" Width="491" IsReadOnly="True" />
+                    <Button Content="browse" Height="32" HorizontalAlignment="Left" Margin="339,10,0,0" Name="OpenFileDialogButton" VerticalAlignment="Top" Width="76" Click="OpenFileDialogButton_Click" />
+                    <Button Content="program" Height="32" HorizontalAlignment="Left" Margin="425,10,0,0" Name="SendFileToProgrammatorButton" VerticalAlignment="Top" Width="76" Click="SendFileToProgrammatorButton_Click" />
+                    <Button Content="get usbasp info" Height="32" HorizontalAlignment="Left" Margin="339,56,0,0" Name="GetInfoProgrammatorButton" VerticalAlignment="Top" Width="87" Click="GetInfoProgrammatorButton_Click" />
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
